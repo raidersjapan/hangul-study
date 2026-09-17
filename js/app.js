@@ -14,6 +14,9 @@ function initTabs() {
       if (targetTab === 'quiz') {
         renderQuizTab();
       }
+      if (targetTab === 'writing') {
+        renderWritingTab();
+      }
     });
   });
 }

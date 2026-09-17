@@ -21,7 +21,19 @@
       <div class="quiz-card" id="quiz-card"></div>
     </section>
     <section id="tab-writing" class="tab-section" data-tab-section="writing" hidden>
-      <p>書き取りタブ（Task 7で実装）</p>
+      <div class="stage-selector" id="writing-stage-selector"></div>
+      <div class="writing-target" id="writing-target"></div>
+      <div class="canvas-wrapper">
+        <canvas id="writing-canvas" width="300" height="300"></canvas>
+      </div>
+      <div class="writing-controls">
+        <label class="guide-toggle">
+          <input type="checkbox" id="guide-toggle" checked>
+          お手本を表示
+        </label>
+        <button id="clear-canvas-button">消す</button>
+        <button id="next-letter-button">次の字母へ</button>
+      </div>
     </section>
     <section id="tab-progress" class="tab-section" data-tab-section="progress" hidden>
       <p>進捗タブ（Task 8で実装）</p>

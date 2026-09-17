@@ -176,3 +176,44 @@ main {
   background: #007aff;
   color: #fff;
 }
+
+.writing-target {
+  text-align: center;
+  font-size: 1.3rem;
+  margin-bottom: 12px;
+}
+
+.canvas-wrapper {
+  display: flex;
+  justify-content: center;
+}
+
+#writing-canvas {
+  border: 1px solid #ccc;
+  border-radius: 12px;
+  background: #fff;
+  touch-action: none;
+}
+
+.writing-controls {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  margin-top: 16px;
+  flex-wrap: wrap;
+}
+
+.writing-controls button {
+  padding: 10px 16px;
+  border-radius: 16px;
+  border: 1px solid #ccc;
+  background: #fff;
+}
+
+.guide-toggle {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 0.9rem;
+}
