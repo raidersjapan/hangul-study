@@ -39,8 +39,11 @@ function weightedPickLetter(letters) {
   return weighted[weighted.length - 1].letter;
 }
 
-function buildOptions(correctLetter, pool, labelFn) {
-  const others = pool.filter(l => l.id !== correctLetter.id);
+function buildOptions(correctLetter, pool, labelFn, excludeSameSound) {
+  let others = pool.filter(l => l.id !== correctLetter.id);
+  if (excludeSameSound && correctLetter.soundKey) {
+    others = others.filter(l => l.soundKey !== correctLetter.soundKey);
+  }
   const shuffled = others.sort(() => Math.random() - 0.5).slice(0, 3);
   const options = shuffled.concat([correctLetter]).map(labelFn);
   return options.sort(() => Math.random() - 0.5);
@@ -50,7 +53,7 @@ function nextQuestion() {
   const stageLetters = getLettersByStage(currentQuizStage);
   const pool = stageLetters.length >= 4 ? stageLetters : ALL_LETTERS;
   const correctLetter = weightedPickLetter(stageLetters);
-  const mode = Math.random() < 0.5 ? 'char-to-sound' : 'sound-to-char';
+  const mode = (isSpeechSupported() && Math.random() < 0.5) ? 'sound-to-char' : 'char-to-sound';
 
   currentQuestion = { correctLetter, mode };
 
@@ -63,7 +66,7 @@ function nextQuestion() {
       correctAnswer: correctLetter.romanization,
     });
   } else {
-    const options = buildOptions(correctLetter, pool, l => l.char);
+    const options = buildOptions(correctLetter, pool, l => l.char, true);
     renderQuestion({
       prompt: correctLetter.char,
       promptType: 'sound',

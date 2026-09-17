@@ -44,15 +44,15 @@ const CONSONANTS_TENSE = [
 ];
 
 const VOWELS_COMPOUND = [
-  { id: 'v-ae', char: 'ㅐ', romanization: 'ae', stage: 'vowel_compound', desc: '日本語の「エ」に近い音（ㅔとほぼ同じ発音）。' },
-  { id: 'v-yae', char: 'ㅒ', romanization: 'yae', stage: 'vowel_compound', desc: '「イェ」に近い音。' },
-  { id: 'v-e', char: 'ㅔ', romanization: 'e', stage: 'vowel_compound', desc: '日本語の「エ」に近い音（ㅐとほぼ同じ発音）。' },
-  { id: 'v-ye', char: 'ㅖ', romanization: 'ye', stage: 'vowel_compound', desc: '「イェ」に近い音。' },
+  { id: 'v-ae', char: 'ㅐ', romanization: 'ae', stage: 'vowel_compound', soundKey: 'e', desc: '日本語の「エ」に近い音（ㅔとほぼ同じ発音）。' },
+  { id: 'v-yae', char: 'ㅒ', romanization: 'yae', stage: 'vowel_compound', soundKey: 'ye', desc: '「イェ」に近い音。' },
+  { id: 'v-e', char: 'ㅔ', romanization: 'e', stage: 'vowel_compound', soundKey: 'e', desc: '日本語の「エ」に近い音（ㅐとほぼ同じ発音）。' },
+  { id: 'v-ye', char: 'ㅖ', romanization: 'ye', stage: 'vowel_compound', soundKey: 'ye', desc: '「イェ」に近い音。' },
   { id: 'v-wa', char: 'ㅘ', romanization: 'wa', stage: 'vowel_compound', desc: '日本語の「ワ」に近い音。' },
-  { id: 'v-wae', char: 'ㅙ', romanization: 'wae', stage: 'vowel_compound', desc: '「ウェ」に近い音。' },
-  { id: 'v-oe', char: 'ㅚ', romanization: 'oe', stage: 'vowel_compound', desc: '「ウェ」に近い音（現代韓国語ではㅙとほぼ同じ発音）。' },
+  { id: 'v-wae', char: 'ㅙ', romanization: 'wae', stage: 'vowel_compound', soundKey: 'we', desc: '「ウェ」に近い音。' },
+  { id: 'v-oe', char: 'ㅚ', romanization: 'oe', stage: 'vowel_compound', soundKey: 'we', desc: '「ウェ」に近い音（現代韓国語ではㅙとほぼ同じ発音）。' },
   { id: 'v-wo', char: 'ㅝ', romanization: 'wo', stage: 'vowel_compound', desc: '「ウォ」に近い音。' },
-  { id: 'v-we', char: 'ㅞ', romanization: 'we', stage: 'vowel_compound', desc: '「ウェ」に近い音。' },
+  { id: 'v-we', char: 'ㅞ', romanization: 'we', stage: 'vowel_compound', soundKey: 'we', desc: '「ウェ」に近い音。' },
   { id: 'v-wi', char: 'ㅟ', romanization: 'wi', stage: 'vowel_compound', desc: '「ウィ」に近い音。' },
   { id: 'v-ui', char: 'ㅢ', romanization: 'ui', stage: 'vowel_compound', desc: '「ウィ」と「ウ」の中間のような音（位置により発音が変わる）。' },
 ];
