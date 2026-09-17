@@ -10,15 +10,17 @@ function renderQuizStageSelector() {
   const container = document.getElementById('quiz-stage-selector');
   container.innerHTML = '';
 
-  STAGES.forEach(stage => {
+  const buttons = STAGES.map(stage => {
     const button = document.createElement('button');
     button.textContent = stage.label;
     button.className = 'stage-button' + (stage.id === currentQuizStage ? ' active' : '');
     button.addEventListener('click', () => {
       currentQuizStage = stage.id;
+      buttons.forEach(btn => btn.classList.toggle('active', btn === button));
       nextQuestion();
     });
     container.appendChild(button);
+    return button;
   });
 }
 

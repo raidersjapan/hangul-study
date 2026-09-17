@@ -15,17 +15,19 @@ function renderWritingStageSelector() {
   const container = document.getElementById('writing-stage-selector');
   container.innerHTML = '';
 
-  STAGES.forEach(stage => {
+  const buttons = STAGES.map(stage => {
     const button = document.createElement('button');
     button.textContent = stage.label;
     button.className = 'stage-button' + (stage.id === currentWritingStage ? ' active' : '');
     button.addEventListener('click', () => {
       currentWritingStage = stage.id;
+      buttons.forEach(btn => btn.classList.toggle('active', btn === button));
       pickWritingLetter();
       clearCanvas();
       drawGuide();
     });
     container.appendChild(button);
+    return button;
   });
 }
 
