@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ハングル学習</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="app-header">
+    <h1>ハングル学習</h1>
+  </header>
+
+  <main>
+    <section id="tab-study" class="tab-section" data-tab-section="study">
+      <p>学習タブ（Task 5で実装）</p>
+    </section>
+    <section id="tab-quiz" class="tab-section" data-tab-section="quiz" hidden>
+      <p>クイズタブ（Task 6で実装）</p>
+    </section>
+    <section id="tab-writing" class="tab-section" data-tab-section="writing" hidden>
+      <p>書き取りタブ（Task 7で実装）</p>
+    </section>
+    <section id="tab-progress" class="tab-section" data-tab-section="progress" hidden>
+      <p>進捗タブ（Task 8で実装）</p>
+    </section>
+  </main>
+
+  <nav class="tab-bar">
+    <button class="tab-button active" data-tab="study">学習</button>
+    <button class="tab-button" data-tab="quiz">クイズ</button>
+    <button class="tab-button" data-tab="writing">書き取り</button>
+    <button class="tab-button" data-tab="progress">進捗</button>
+  </nav>
+
+  <script src="js/data.js"></script>
+  <script src="js/storage.js"></script>
+  <script src="js/speech.js"></script>
+  <script src="js/study.js"></script>
+  <script src="js/quiz.js"></script>
+  <script src="js/writing.js"></script>
+  <script src="js/app.js"></script>
+</body>
+</html>

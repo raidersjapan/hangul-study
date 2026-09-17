@@ -1,0 +1,56 @@
+* {
+  box-sizing: border-box;
+}
+
+html, body {
+  margin: 0;
+  padding: 0;
+  font-family: -apple-system, BlinkMacSystemFont, "Hiragino Sans", "Yu Gothic", sans-serif;
+  background: #f5f5f7;
+  color: #1c1c1e;
+}
+
+.app-header {
+  padding: 16px;
+  text-align: center;
+  background: #ffffff;
+  border-bottom: 1px solid #e0e0e0;
+}
+
+.app-header h1 {
+  margin: 0;
+  font-size: 1.2rem;
+}
+
+main {
+  padding: 16px;
+  padding-bottom: 80px; /* タブバーの高さ分の余白 */
+}
+
+.tab-section[hidden] {
+  display: none;
+}
+
+.tab-bar {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  display: flex;
+  background: #ffffff;
+  border-top: 1px solid #e0e0e0;
+}
+
+.tab-button {
+  flex: 1;
+  padding: 14px 0;
+  border: none;
+  background: none;
+  font-size: 0.95rem;
+  color: #666;
+}
+
+.tab-button.active {
+  color: #007aff;
+  font-weight: bold;
+}
