@@ -17,6 +17,9 @@ function initTabs() {
       if (targetTab === 'writing') {
         renderWritingTab();
       }
+      if (targetTab === 'progress') {
+        renderProgressTab();
+      }
     });
   });
 }
