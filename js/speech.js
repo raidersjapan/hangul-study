@@ -15,16 +15,20 @@ if (isSpeechSupported()) {
   window.speechSynthesis.onvoiceschanged = loadVoices;
 }
 
+let currentUtterance = null;
+
 function speakKorean(text) {
   if (!isSpeechSupported()) {
     return;
   }
-  window.speechSynthesis.cancel();
-  const utterance = new SpeechSynthesisUtterance(text);
-  utterance.lang = 'ko-KR';
+  if (window.speechSynthesis.speaking || window.speechSynthesis.pending) {
+    window.speechSynthesis.cancel();
+  }
+  currentUtterance = new SpeechSynthesisUtterance(text);
+  currentUtterance.lang = 'ko-KR';
   const koreanVoice = cachedVoices.find(voice => voice.lang === 'ko-KR');
   if (koreanVoice) {
-    utterance.voice = koreanVoice;
+    currentUtterance.voice = koreanVoice;
   }
-  window.speechSynthesis.speak(utterance);
+  window.speechSynthesis.speak(currentUtterance);
 }
