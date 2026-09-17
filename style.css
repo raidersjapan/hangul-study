@@ -54,3 +54,64 @@ main {
   color: #007aff;
   font-weight: bold;
 }
+
+.stage-selector {
+  display: flex;
+  gap: 8px;
+  overflow-x: auto;
+  margin-bottom: 16px;
+}
+
+.stage-button {
+  flex-shrink: 0;
+  padding: 8px 14px;
+  border: 1px solid #ccc;
+  border-radius: 16px;
+  background: #fff;
+  font-size: 0.9rem;
+}
+
+.stage-button.active {
+  background: #007aff;
+  color: #fff;
+  border-color: #007aff;
+}
+
+.letter-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
+  gap: 12px;
+}
+
+.letter-card {
+  background: #fff;
+  border-radius: 12px;
+  padding: 16px;
+  text-align: center;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+.letter-card.speakable {
+  cursor: pointer;
+}
+
+.letter-char {
+  font-size: 2.2rem;
+}
+
+.letter-romanization {
+  color: #666;
+  margin-top: 4px;
+}
+
+.letter-name {
+  font-size: 0.8rem;
+  color: #999;
+  margin-top: 2px;
+}
+
+.letter-desc {
+  font-size: 0.75rem;
+  color: #444;
+  margin-top: 8px;
+}
