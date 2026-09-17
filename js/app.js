@@ -10,6 +10,10 @@ function initTabs() {
       sections.forEach(section => {
         section.hidden = section.getAttribute('data-tab-section') !== targetTab;
       });
+
+      if (targetTab === 'quiz') {
+        renderQuizTab();
+      }
     });
   });
 }
