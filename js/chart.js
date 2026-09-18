@@ -38,6 +38,29 @@ function composeSyllable(consonant, vowel) {
   return String.fromCharCode(0xAC00 + consonant.index * 588 + vowel.index * 28);
 }
 
+// 見出し用のローマ字は「学習」タブと同じ表記（g/k など）を使う
+function getHeaderRomanization(char) {
+  const letter = ALL_LETTERS.find(l => l.char === char);
+  return letter ? letter.romanization : '';
+}
+
+function createChartHeaderCell(char, scope) {
+  const th = document.createElement('th');
+  th.scope = scope;
+
+  const charEl = document.createElement('div');
+  charEl.className = 'chart-header-char';
+  charEl.textContent = char;
+
+  const romEl = document.createElement('div');
+  romEl.className = 'chart-header-romanization';
+  romEl.textContent = getHeaderRomanization(char);
+
+  th.appendChild(charEl);
+  th.appendChild(romEl);
+  return th;
+}
+
 function renderChartTab() {
   const wrapper = document.getElementById('chart-table-wrapper');
   wrapper.innerHTML = '';
@@ -48,10 +71,7 @@ function renderChartTab() {
   const headRow = document.createElement('tr');
   headRow.appendChild(document.createElement('th'));
   CHART_VOWELS.forEach(vowel => {
-    const th = document.createElement('th');
-    th.scope = 'col';
-    th.textContent = vowel.char;
-    headRow.appendChild(th);
+    headRow.appendChild(createChartHeaderCell(vowel.char, 'col'));
   });
   const thead = document.createElement('thead');
   thead.appendChild(headRow);
@@ -68,10 +88,7 @@ function renderChartTab() {
     }
     previousWasTense = Boolean(consonant.tense);
 
-    const rowHead = document.createElement('th');
-    rowHead.scope = 'row';
-    rowHead.textContent = consonant.char;
-    row.appendChild(rowHead);
+    row.appendChild(createChartHeaderCell(consonant.char, 'row'));
 
     CHART_VOWELS.forEach(vowel => {
       const syllable = composeSyllable(consonant, vowel);

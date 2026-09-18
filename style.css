@@ -283,7 +283,6 @@ main {
 }
 
 .chart-table thead th {
-  font-size: 1.2rem;
   color: #007aff;
   background: #fff;
 }
@@ -292,7 +291,6 @@ main {
   position: sticky;
   left: 0;
   z-index: 1;
-  font-size: 1.2rem;
   color: #007aff;
   background: #f0f6ff;
   border-right: 1px solid #ddd;
@@ -301,6 +299,15 @@ main {
 .chart-tense-start th,
 .chart-tense-start td {
   border-top: 3px solid #ddd;
+}
+
+.chart-header-char {
+  font-size: 1.2rem;
+}
+
+.chart-header-romanization {
+  font-size: 0.65rem;
+  white-space: nowrap;
 }
 
 .chart-cell {
