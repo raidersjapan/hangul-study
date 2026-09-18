@@ -26,7 +26,10 @@ function speakKorean(text) {
   }
   currentUtterance = new SpeechSynthesisUtterance(text);
   currentUtterance.lang = 'ko-KR';
-  const koreanVoice = cachedVoices.find(voice => voice.lang === 'ko-KR');
+  const koreanVoices = cachedVoices.filter(voice => voice.lang === 'ko-KR');
+  // 名前に「(言語)」が付く声はOS共通のノベルティ音声で、Chromeでは無音になることがある。
+  // 単独名の専用音声（例: Yuna）があればそちらを優先する。
+  const koreanVoice = koreanVoices.find(voice => !voice.name.includes('(')) || koreanVoices[0];
   if (koreanVoice) {
     currentUtterance.voice = koreanVoice;
   }
