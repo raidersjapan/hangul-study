@@ -1,4 +1,4 @@
-const CACHE_NAME = 'hangul-study-v1';
+const CACHE_NAME = 'hangul-study-v2';
 const ASSETS = [
   './',
   './index.html',
@@ -8,6 +8,7 @@ const ASSETS = [
   './js/storage.js',
   './js/speech.js',
   './js/study.js',
+  './js/chart.js',
   './js/quiz.js',
   './js/writing.js',
   './js/progress.js',

@@ -11,6 +11,9 @@ function initTabs() {
         section.hidden = section.getAttribute('data-tab-section') !== targetTab;
       });
 
+      if (targetTab === 'chart') {
+        renderChartTab();
+      }
       if (targetTab === 'quiz') {
         renderQuizTab();
       }

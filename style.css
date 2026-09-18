@@ -255,3 +255,67 @@ main {
   color: #fff;
   font-size: 1rem;
 }
+
+.chart-title {
+  margin: 0 0 12px;
+  font-size: 1.1rem;
+  text-align: center;
+}
+
+.chart-table-wrapper {
+  overflow-x: auto;
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+.chart-table {
+  border-collapse: separate;
+  border-spacing: 0;
+  width: 100%;
+  text-align: center;
+}
+
+.chart-table th,
+.chart-table td {
+  padding: 8px 6px;
+  border-bottom: 1px solid #eee;
+}
+
+.chart-table thead th {
+  font-size: 1.2rem;
+  color: #007aff;
+  background: #fff;
+}
+
+.chart-table tbody th {
+  position: sticky;
+  left: 0;
+  z-index: 1;
+  font-size: 1.2rem;
+  color: #007aff;
+  background: #f0f6ff;
+  border-right: 1px solid #ddd;
+}
+
+.chart-tense-start th,
+.chart-tense-start td {
+  border-top: 3px solid #ddd;
+}
+
+.chart-cell {
+  min-width: 56px;
+}
+
+.chart-cell.speakable {
+  cursor: pointer;
+}
+
+.chart-syllable {
+  font-size: 1.5rem;
+}
+
+.chart-romanization {
+  font-size: 0.7rem;
+  color: #888;
+}

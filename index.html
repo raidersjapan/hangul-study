@@ -23,6 +23,10 @@
       <div class="stage-selector" id="study-stage-selector"></div>
       <div class="letter-grid" id="study-letter-grid"></div>
     </section>
+    <section id="tab-chart" class="tab-section" data-tab-section="chart" hidden>
+      <h2 class="chart-title">ハングル文字表</h2>
+      <div class="chart-table-wrapper" id="chart-table-wrapper"></div>
+    </section>
     <section id="tab-quiz" class="tab-section" data-tab-section="quiz" hidden>
       <div class="stage-selector" id="quiz-stage-selector"></div>
       <div class="quiz-card" id="quiz-card"></div>
@@ -50,6 +54,7 @@
 
   <nav class="tab-bar">
     <button class="tab-button active" data-tab="study">学習</button>
+    <button class="tab-button" data-tab="chart">文字表</button>
     <button class="tab-button" data-tab="quiz">クイズ</button>
     <button class="tab-button" data-tab="writing">書き取り</button>
     <button class="tab-button" data-tab="progress">進捗</button>
@@ -59,6 +64,7 @@
   <script src="js/storage.js"></script>
   <script src="js/speech.js"></script>
   <script src="js/study.js"></script>
+  <script src="js/chart.js"></script>
   <script src="js/quiz.js"></script>
   <script src="js/writing.js"></script>
   <script src="js/progress.js"></script>
