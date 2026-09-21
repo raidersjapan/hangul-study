@@ -14,6 +14,9 @@ function initTabs() {
       if (targetTab === 'chart') {
         renderChartTab();
       }
+      if (targetTab === 'kana') {
+        renderKanaTab();
+      }
       if (targetTab === 'quiz') {
         renderQuizTab();
       }

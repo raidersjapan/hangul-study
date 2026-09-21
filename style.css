@@ -46,7 +46,7 @@ main {
   padding: 14px 0;
   border: none;
   background: none;
-  font-size: 0.95rem;
+  font-size: 0.8rem; /* 6タブがiPhone幅に収まるように */
   color: #666;
 }
 

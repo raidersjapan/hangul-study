@@ -27,6 +27,10 @@
       <h2 class="chart-title">ハングル文字表</h2>
       <div class="chart-table-wrapper" id="chart-table-wrapper"></div>
     </section>
+    <section id="tab-kana" class="tab-section" data-tab-section="kana" hidden>
+      <h2 class="chart-title">50音表（ハングル表記）</h2>
+      <div class="chart-table-wrapper" id="kana-table-wrapper"></div>
+    </section>
     <section id="tab-quiz" class="tab-section" data-tab-section="quiz" hidden>
       <div class="stage-selector" id="quiz-stage-selector"></div>
       <div class="quiz-card" id="quiz-card"></div>
@@ -55,6 +59,7 @@
   <nav class="tab-bar">
     <button class="tab-button active" data-tab="study">学習</button>
     <button class="tab-button" data-tab="chart">文字表</button>
+    <button class="tab-button" data-tab="kana">50音</button>
     <button class="tab-button" data-tab="quiz">クイズ</button>
     <button class="tab-button" data-tab="writing">書き取り</button>
     <button class="tab-button" data-tab="progress">進捗</button>
@@ -65,6 +70,7 @@
   <script src="js/speech.js"></script>
   <script src="js/study.js"></script>
   <script src="js/chart.js"></script>
+  <script src="js/kana.js"></script>
   <script src="js/quiz.js"></script>
   <script src="js/writing.js"></script>
   <script src="js/progress.js"></script>
